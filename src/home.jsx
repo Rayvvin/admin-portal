@@ -239,7 +239,7 @@ function Home() {
   const [theme, setTheme] = useTheme();
   const [orders, setOrders] = useState(null);
   const [products, setProducts] = useState(null);
-  const [viewAdmin, setViewAdmin] = useState(false);
+  const [viewAdmin, setViewAdmin] = useState(true);
 
   function handleChangeView(checked) {
     setViewAdmin(checked);
@@ -252,7 +252,7 @@ function Home() {
           let { data: order, error } = await supabase
             .from("order")
             .select("*")
-            .eq("store_id", identity?.data?.medusa_store.id);
+            // .eq("store_id", identity?.data?.medusa_store.id);
           // .maybeSingle();
 
           setOrders(order);
@@ -267,7 +267,7 @@ function Home() {
           let { data: product, error } = await supabase
             .from("product")
             .select("*")
-            .eq("store_id", identity?.data?.medusa_store.id);
+            // .eq("store_id", identity?.data?.medusa_store.id);
           // .maybeSingle();
 
           // console.log(product);
@@ -335,10 +335,10 @@ function Home() {
         />,
       ],
       row_size: "small",
-      filter:
-        identity && identity.data && identity.data?.medusa_store
-          ? { store_id: identity?.data?.medusa_store?.id }
-          : null,
+      // filter:
+      //   identity && identity.data && identity.data?.medusa_store
+      //     ? { store_id: identity?.data?.medusa_store?.id }
+      //     : null,
     },
     {
       title: "New Customers",
@@ -454,12 +454,12 @@ function Home() {
           Home
         </h2>
         <Stack alignItems={"center"}>
-          <Switch onChange={handleChangeView} checked={viewAdmin} />
+          {/* <Switch onChange={handleChangeView} checked={viewAdmin} />
           {viewAdmin ? (
             <p style={{ fontSize: "13px", fontFamily: "Rubik" }}>Admin On</p>
           ) : (
             <p style={{ fontSize: "13px", fontFamily: "Rubik" }}>Admin Off</p>
-          )}
+          )} */}
         </Stack>
       </Stack>
       <Stack

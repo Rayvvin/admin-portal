@@ -53,7 +53,7 @@ const SuperAdminAnalytics = () => {
   return (
     <Grid container spacing={2}>
       {/* Key Metrics Over Time */}
-      <Grid item xs={12} md={8}>
+      <Grid item xs={12} md={12}>
         <Card
           className="card"
           sx={{
@@ -86,7 +86,7 @@ const SuperAdminAnalytics = () => {
       </Grid>
 
       {/* Global Sales Map */}
-      <Grid item xs={12} md={4}>
+      {/* <Grid item xs={12} md={4}>
         <Card
           className="card"
           sx={{
@@ -107,10 +107,10 @@ const SuperAdminAnalytics = () => {
             <GlobalSalesMap />
           </CardContent>
         </Card>
-      </Grid>
+      </Grid> */}
 
       {/* Regional Sales Comparison */}
-      <Grid item xs={12}>
+      {/* <Grid item xs={12}>
         <Card
           className="card"
           sx={{
@@ -146,7 +146,7 @@ const SuperAdminAnalytics = () => {
             </ResponsiveContainer>
           </CardContent>
         </Card>
-      </Grid>
+      </Grid> */}
 
       {/* Market Share Pie Chart */}
       <Grid item xs={12} md={6}>

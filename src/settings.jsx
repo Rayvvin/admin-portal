@@ -145,14 +145,14 @@ function Settings() {
       color: "var(--emerald)",
       route: '/region'
     },
-    {
-      title: "Manage the currencies of your store",
-      value: "Currencies",
-      percentage: "+15%",
-      icon: <RestorePage sx={{ color: "var(--emerald)" }} fontSize="large" />,
-      color: "var(--emerald)",
-      route: '/store-currencies'
-    },
+    // {
+    //   title: "Manage the currencies of your store",
+    //   value: "Currencies",
+    //   percentage: "+15%",
+    //   icon: <RestorePage sx={{ color: "var(--emerald)" }} fontSize="large" />,
+    //   color: "var(--emerald)",
+    //   route: '/store-currencies'
+    // },
     // {
     //   title: "Control which product are available in which channels",
     //   value: "Sales Channels",
@@ -162,17 +162,17 @@ function Settings() {
     //   ),
     //   color: "var(--imperial-red)",
     // },
-    {
-      title: "Manage your business details",
-      value: "Store Details",
-      percentage: "",
-      icon: <Storefront sx={{ color: "var(--sunglow)" }} fontSize="large" />,
-      color: "var(--sunglow)",
-      route:
-        identity && identity.data && identity.data.medusa_user
-          ? `/user/${identity?.data?.medusa_user?.id}/show`
-          : null,
-    },
+    // {
+    //   title: "Manage your business details",
+    //   value: "Store Details",
+    //   percentage: "",
+    //   icon: <Storefront sx={{ color: "var(--sunglow)" }} fontSize="large" />,
+    //   color: "var(--sunglow)",
+    //   route:
+    //     identity && identity.data && identity.data.medusa_user
+    //       ? `/user/${identity?.data?.medusa_user?.id}/show`
+    //       : null,
+    // },
     // {
     //   title: "Manage taxes across regions and products",
     //   value: "Taxes",
