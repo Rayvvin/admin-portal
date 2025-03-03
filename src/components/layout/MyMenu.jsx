@@ -242,6 +242,67 @@ export const MyMenu = () => {
         leftIcon={<Settings fontSize="small" />}
       />
 
+      <SubMenu primaryText="Logistics" leftIcon={<ChevronRight />}>
+        <Menu.Item
+          sx={
+            {
+              // fontFamily: "Rubik !important",
+              // "&.RaMenuItemLink-active": {
+              //   borderLeft: "none",
+              //   background: "none",
+              // },
+            }
+          }
+          to={"/logistics_orgs"}
+          primaryText="Logistics Orgs"
+          leftIcon={<LocalShipping fontSize="small" />}
+        />
+        <Menu.Item
+          sx={
+            {
+              // fontFamily: "Rubik !important",
+              // "&.RaMenuItemLink-active": {
+              //   borderLeft: "none",
+              //   background: "none",
+              // },
+            }
+          }
+          to={"/collection_stations"}
+          primaryText="Collection Stations"
+          leftIcon={<LocalShipping fontSize="small" />}
+        />
+
+        <Menu.Item
+          sx={
+            {
+              // fontFamily: "Rubik !important",
+              // "&.RaMenuItemLink-active": {
+              //   borderLeft: "none",
+              //   background: "none",
+              // },
+            }
+          }
+          to={"/pickup_requests"}
+          primaryText="Pickup Requests"
+          leftIcon={<LocalShipping fontSize="small" />}
+        />
+
+        <Menu.Item
+          sx={
+            {
+              // fontFamily: "Rubik !important",
+              // "&.RaMenuItemLink-active": {
+              //   borderLeft: "none",
+              //   background: "none",
+              // },
+            }
+          }
+          to={"/deliveries"}
+          primaryText="Deliveries"
+          leftIcon={<LocalShipping fontSize="small" />}
+        />
+      </SubMenu>
+
       {/* <Menu.Item
         to="/discount"
         primaryText="Discounts"
