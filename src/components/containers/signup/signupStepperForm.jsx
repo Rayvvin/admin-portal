@@ -73,7 +73,7 @@ export default function SignUpStepper({
   const redirect = useRedirect();
 
   const totalSteps = () => {
-    return steps.length;
+    return steps.length - 1;
   };
 
   const completedSteps = () => {
@@ -225,17 +225,17 @@ export default function SignUpStepper({
       errors.address = "Choose a valid Address";
     }
 
-    // if (!data.market) {
-    //   errors.market = "Choose a valid Market";
-    // }
+    if (!data.market) {
+      errors.market = "Choose a valid Market";
+    }
 
-    // if (!data.nearby_market) {
-    //   errors.nearby_market = "Choose a valid Nearby market";
-    // }
+    if (!data.nearby_market) {
+      errors.nearby_market = "Choose a valid Nearby market";
+    }
 
-    // if (!data.new_market_name) {
-    //   errors.new_market_name = "Enter a valid New market Name";
-    // }
+    if (!data.new_market_name) {
+      errors.new_market_name = "Enter a valid New market Name";
+    }
 
     switch (number) {
       case 0:
@@ -261,7 +261,7 @@ export default function SignUpStepper({
 
         break;
 
-
+      
 
       default:
         break;
@@ -338,22 +338,22 @@ export default function SignUpStepper({
                   } else {
                     let fieldname = dt;
                     let fieldvalue = data[dt];
-                    switch (dt) {
-                      case "province":
-                        fieldvalue = state_obj.name;
-                        break;
+                    // switch (dt) {
+                    //   case "province":
+                    //     fieldvalue = state_obj.name;
+                    //     break;
 
-                      case "nearby_market":
-                        fieldvalue = nearby_market_obj.market_name;
-                        break;
+                    //   case "nearby_market":
+                    //     fieldvalue = nearby_market_obj.market_name;
+                    //     break;
 
-                      case "new_market_name":
-                        fieldvalue = new_market_obj.un_reg_market;
-                        break;
+                    //   case "new_market_name":
+                    //     fieldvalue = new_market_obj.un_reg_market;
+                    //     break;
 
-                      default:
-                        break;
-                    }
+                    //   default:
+                    //     break;
+                    // }
                     return (
                       <Stack
                         key={fieldname}

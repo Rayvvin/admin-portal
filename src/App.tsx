@@ -178,7 +178,7 @@ export const App = () => {
           <Route path="/store-currencies" element={<StoreCurrencies />} />
         </CustomRoutes>
         <CustomRoutes noLayout={true}>
-          <Route path="/verify-phone" element={<PhoneVerificationWizard />} />
+        <Route path="/verify" element={<PhoneVerificationWizard />} />
           <Route
             path="/complete-registration"
             element={<AccountUpdateWizardForm />}
